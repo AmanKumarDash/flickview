@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en-in">
+        <head>
+                <title>flickview|movies,shows</title>
+        <link href="public/images/favicon.ico" rel="shortcut icon">
+        <meta name="viewport" content="width=device-width,initial scale=1.0">
+        <meta http-equiv="refresh" content="60">
+        <meta name="keywords" content="online ticket booking,movie tickets,ticket booking,shows ticket">
+        <meta name="discription" content="embrace the magic of cinema,effortless ticket booking at your fingertips, discover the latest movie trend ">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        
+        <style>
+                body{
+                        background: covor;
+                        
+
+
+                }
+                
+                .shade{
+                        width: 100vw;
+                        height: 100vh;
+                        background-color: rgba(0,0,0, 0.3);
+                        margin-left:-20px;
+                        margin-top: -15px;
+                        margin-right: -20px;
+
+
+                }
+                header{
+                
+                        font-family: arial;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 15px;
+                        margin-right: 10px;
+                        margin-left: 10px;
+                        background-image: url(public/images/colorful-background.jpg);
+                }
+                .title{
+                        font-size: 60px;
+                        font-family: aril;
+                        font-weight: bolder;
+
+                        color: white;
+                        margin-left: 10px;
+                        padding: 10px;
+                          background-image:url('https://wallpapers.com/images/featured-full/abstract-background-6m6cjbifu3zpfv84.jpg');  
+                        /* background-image: url('https://wallpapers.com/background/70-s-groovy-background-1280-x-891-5q1pyn4qna7c8dmj.html'); */
+                        /* background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fpngtree.com%2Ffree-nature-background&psig=AOvVaw1s-8kqh3AtIUBLvU27DC04&ust=1702565328863000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOD_q6LUjIMDFQAAAAAdAAAAABAI.jpg'); */
+                        background-position: center;
+                        background-size: cover;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        color: transparent;
+                        /* background-color: rgba(0,0,0, 0.3); */
+                          text-shadow: /*0px 0px 10px,#f8cf29 
+                                     0px 0px 20px,#f83f29
+                                     0px 0px 40px,#f8cf29 */
+                                     0px 0px 80px#f8cf29;
+                }
+                .language{
+                        color: white;
+                        font-family: arial;
+                        font-weight: bold;
+                        font-size: 18px;
+                        background-color: black;
+                        border-radius: 5px;
+                }
+                .bi-heart{
+                        color: red;
+                        background-color: wheat;
+                        border-radius: 5px;
+                        fill: red;
+
+                }
+                .bi-person{
+                        color: white;
+                        background-color: black;
+                        border-radius: 5px;
+                }
+                .bi-signin{
+                        
+                         /* color: white;
+                        font-family: arial;
+                        font-size: 18px;
+                        font-weight: bold; */
+                        padding: 5px;
+                        background-color: black;
+                        color: white;
+                        border-radius: 5px;
+                }
+
+                nav {
+                        position: relative;
+                        margin-top: 10px;
+                        margin-right: 250px;
+                        width: 490px;
+                        height: 50px;
+                        background: #6d44b8;;
+                        border-radius: 8px;
+                        font-size: 0px;
+                        box-shadow: 0 2px 3px 0 rgba(0,0,0, 0.3);     
+                        align-items: center;
+                        
+                }
+                nav a{
+                        font-size: 15px;
+                        text-transform: uppercase;
+                        color: black;
+                        text-decoration: none;
+                        line-height: 50px;
+                        position: relative;
+                        z-index:1;
+                        display: inline-block;
+                        text-align: center;
+                        
+                }
+                nav .animation{
+                        position: absolute;
+                        height: 100%;
+                        top: 0;
+                        z-index:0;
+                        background: white;
+                        width: 100px;
+                        border-radius: 8px;
+                        transition: all .5s ease-in-out 0s;
+                }
+                a:nth-child(1){
+                        width: 100px;
+                }
+                
+                nav .start-home,:nth-child(1):hover~.animation{
+                        width: 100px;
+                        left: 0;
+                        letter-spacing: 3px;
+                }
+                a:nth-child(2){
+                        width: 110px;
+                }
+                nav .start-home,:nth-child(2):hover~.animation{
+                        width: 110px;
+                        left:100px;
+                }
+                a:nth-child(3){
+                        width: 100px;
+                        
+
+                }
+                nav .start-home,:nth-child(3):hover~.animation{
+                        width: 100px;
+                        left: 210px;
+                }
+                a:nth-child(4){
+                        width: 160px;
+
+                }
+                nav .start-home,:nth-child(4):hover~.animation{
+                        width: 160px;
+                        left: 320px;
+                }                        
+
+                
+                .icon span{
+                        
+                        margin-right:50px;
+                        padding: 15px;
+                        color: white;
+                        border-radius: 250px;
+                        color: white;
+                        
+
+                
+                }
+                article{
+                        
+                        padding: 20px;
+                        color: white;
+                        text-align: center;
+                        font-family: arial;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                        font-size: 25px;
+                        margin-top: -20px;
+                        margin-bottom: 20px;
+                }
+                .bi-lightning{
+                        color: gold;
+
+                }
+                .sitetitle{
+                        color: white;
+                        font-family: arial;
+                        font-size: 30px;
+                        font-weight: bold;
+                        margin-left: 1000px;
+                        margin-top: 15px;
+                
+                }
+                .subsitetitle{
+                        color: white;
+                        font-family: arial;
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin-left: 1000px;
+                        margin-top: 5px;
+                }
+                .msubsitetitle{
+                        color: white;
+                        font-family: arial;
+                        font-size: 25px;
+                        font-weight: bold;
+                        margin-left: 1000px;
+                        margin-top: 5px;
+                }
+                /* main{
+                        color: white;
+                        margin-top: 20px;
+                        margin-left: 1000px;
+                        font-size: 20px;
+                } */
+                /* .register{
+                        font-family: arial;
+                        font-size: 20px;
+                        margin-top: 10px;
+                        margin-left:5px ; */
+                /* }
+                /* .registerform{
+                        margin-top: 20px;
+                        margin-left: 5px; */
+                 */
+                /* .email{
+                        padding: 10px;
+                        background: white;
+                        color: black;
+                        width: 300px;
+                        display: inline-block;
+
+                }
+                .Email address{
+                        margin-top: 20px;
+                        width: 100%;
+                        padding: 13px;
+                        border-radius: 5px;
+                        background-color: black;
+                        color: white;
+                        border: solid;
+                        font-family: Arial, Helvetica, sans-serif;
+                        cursor: pointer;
+
+                }
+                .email-btn{
+                        text-decoration: none;
+                        
+                }
+
+                .button{
+                        background-color: white;
+                        padding: 10px;
+                        display: inline-block;
+                        width: 80px;
+                        font-size: 15px;
+                        color: black;
+                        border-radius: 5px; */
+
+                /* } */
+                *{
+                        box-sizing:border-box;
+                        margin-top: 0px;
+                        padding: 0%;
+                }
+                .main{
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        background-color:#2f0d6e;;
+                        margin-left: 1000px;
+                        max-height: 300px;
+                        overflow:hidden ;
+                        box-shadow: 70px 70px 10px 30px #24004628;
+                        margin-right: 120px;
+                        padding-top: 20px;
+                        
+
+                        
+                }
+                .form{
+                        display: flex;
+                        flex-direction: column;
+                        
+                        gap: 5px;
+                        padding: 10px;
+                        font-size: 10px;
+                }
+                #chk{
+                        display: none;
+                }
+                .login{
+                        position: relative;
+                        width: 200px;
+                        height: 200px;
+                        margin-top: 10px;
+                        border-radius: 90% / 5%;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: bold;
+                        padding-top: 20px;
+                        
+                }
+                .login label{
+                        margin: 5% 0  5%;
+                        
+                }
+                label{
+                        color: #fff;
+                        font-size: 30px;
+                        justify-content: center;
+                        display: flex;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: 03s ease-in-out;
+                        
+                        
+
+                }
+                .input{
+                        width: 250px;
+                        height: 10px;
+                        background-color:white;
+                        padding: 20px;
+                        border: none;
+                        outline: none;
+                        border-radius: 5px;
+                        font-size: 10px;
+                        
+                }
+                .register{
+                        background: #f1e3e3;
+                        border-radius: 90% / 5%;
+                        transform: translateY(10%);
+                        transition: .6s ease-in-out;
+                        
+                }
+                .register label{
+                        color:#573b8a;
+                        transform: scale(.9);
+                        
+                }
+                #chk:checked ~.register{
+                        transform: translateY(-77%);
+                }
+
+                #chk:checked ~.register label{
+                        transform: scale(1);
+                        margin: 5% 0 5%;
+
+                }
+                #chk:checked ~.login label{
+                        transform:(.6);
+                        margin: 35% 0 5%;
+                }
+                .form button{
+                        width:150px ;
+                        height: 20px;
+                        margin: 10px auto 10px;
+                        color: #fff;
+                        background: #573b8a;
+                        font-size: 15px;
+                        border: none;
+                        border-radius: 8px;
+                        cursor: pointer;
+                        transition: .2s ease-in-out;
+                }
+                .form button:hover{
+                        background-color: #360c83;
+                 }
+                 summary {
+            background-color: black;
+            color:white;
+            padding: 10px;
+        }
+        details {
+            margin-bottom: 10px;
+        }
+
+                figure{
+                border: 2px solid black;
+                padding: 10px;
+                height: 100px;
+                width: 700px;
+                margin-left: 700px;
+                margin-top: 100px;
+                padding-right: 10px;
+                padding-top: 10px;
+        }
+        figure div{
+                border: 1px dotted white;
+                width: 690px;
+                height: 90px;
+                background-color: yellow;
+                font-size: 37px;
+                font-family:'Courier New', Courier, monospace;
+                font-weight: bold;
+                padding: 5px;
+                
+        }
+        figcaption{
+                margin-top: 20px;
+                font-size: 20px;
+                color: goldenrod;
+                display: block;
+                padding-top: 10px;
+        } 
+                .back{
+                        background-color: white;
+                        color: balck;
+                        font-family: arial;
+                        font-weight: bold;
+                        text-align: center;
+                        font-size: 20px;
+                        padding: 10px;
+                        margin-left: -10px;
+                        margin-right: -10px;
+                }
+                footer{
+                        background-color: black;
+                color: white;
+                background-size: 200px;
+                padding: 10px;
+                display:grid;
+                grid-template-columns: 6fr 6fr;
+                height: 100px;
+                margin-bottom: -10px;
+                margin-left: -10px;
+                margin-right: -8px;
+                }
+                .panel-1{
+                        font-family: Arial, Helvetica, sans-serif;
+                display: grid;
+                grid-template-columns: 3fr 3fr 3fr 3fr;
+                border-right: 1px solid white;
+                }
+                .panel-2{
+                        font-family: Arial, Helvetica, sans-serif;
+                display: grid;
+                grid-template-columns: 6fr 6fr;
+                padding-left:20px ;
+        }
+        aside{
+                        font-size: 30px;
+                        width: 40px;
+                        background-color:black;
+                        color:white;
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        margin-right: -10px;
+                }
+                aside div{
+                        margin-bottom: 10px;
+                        margin-right: -10px;
+                }
+        
+        </style>
+        
+        </head>
+        <body background="public/images/back.jpg">
+                <div class="shade">
+                        <!-- <h1>Welcome to my App</h1> -->
+                        <!-- <button onclick="location.href='registration.html'">continue</button>  -->
+                        
+                <header>
+                <div>
+                        <span class="title">FLICKVIEW</span>
+                        <!-- <h1 class="title">FLICKVIEW</h1> -->
+                </div>
+                <nav>
+                        <!-- <span >Home</span>
+                        <span>Catagory</span>
+                        <span>blogs</span>
+                        <span>Trending</span> -->
+                        <a href="#">Home</a>
+                        <a href="#">Catagory</a>
+                        <a href="#">Trending</a>
+                        <a href="#">Blog</a>
+                        <div class="animation start-home"></div>
+                </nav>
+                <div class="icons">
+                        <span class="language">English</span>
+                        <span class="bi bi-heart"></span>
+                        <span class="bi bi-person"></span>
+                        <span class="signin">signin</span>
+                </div>
+                </header>
+                <article>
+                        <div>
+                                <span class="bi bi-lightning"></span>
+                                <span>EXPERIENCE THE MOVIE MANIA</span>
+                                <span class="bi bi-lightning"></span>
+                        </div>
+                </article>
+                <section id="section-1">
+                        <div class="sitetitle">Book your ticket in one Tab</div>
+                        <div class="subsitetitle">Book anytime and anywhere........</div>
+                        <div class="msubsitetitle">EAT...FLICK......SLEEP....REPEAT....</div>
+
+                <main>
+                         <!-- <div class="register">Ready to flick? enter your Email/phone.</div>
+                         <div class="registerform">
+                                <span class="email">Enter our mail </span>
+                                <span class="button">  
+                                         <div class="email-section">
+                                                <div class="email">
+                                                    <input type="email" class="email" placeholder="Email address">
+                                                </div>
+                                                <div><button class="email-btn">Get Started ></button></div>
+                                
+                                        <span class="bi bi-chevron-bar"</span>
+                                </span> -->
+                         <!-- </div>  -->
+                        <div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="login">
+				<form class="form">
+					<label for="chk" aria-hidden="true">Log in</label>
+					<input class="input" type="email" name="email" placeholder="Email" required="">
+					<input class="input" type="password" name="pswd" placeholder="Password" required="">
+					<button>Log in</button>
+				</form>
+			</div>
+                
+
+      <div class="register">
+				<form class="form">
+					<label for="chk" aria-hidden="true">Register</label>
+					<input class="input" type="text" name="txt" placeholder="Username" required="">
+					<input class="input" type="email" name="email" placeholder="Email" required="">
+					<input class="input" type="password" name="pswd" placeholder="Password" required="">
+					<button>Register</button>
+				</form>
+			</div>
+	</div>
+        
+
+                </main>
+                <!-- <script>
+                        function Login(){
+                                window.location.href='main.html';
+                        }
+                        function Register(){
+                                window.location.href='main.html';
+                        }
+                </script> -->
+                </section>
+        <!-- <figure>
+                <div>
+                        Get a free Ticket On your First booking
+
+                </div>
+                <figcaption class=""></figcaption>
+                
+        </figure> -->
+                </div>
+
+        <body>
+                <div class="back">Back to top</div>
+                <footer>
+                        <div class="panel-1">
+                                <div>
+                                        ABOUT:<br>
+                                        <span>contact us</span><br>
+                                        <span>About us</span><br>
+                                        <span>Stories</span><br>
+                                        <span>Corporate information</span>
+                                </div>
+                                <div>
+                                        HElP:<br>
+                                        <span>Payments</span><br>
+                                        <span>FAQ</span><br>
+                                        <span>Report</span><br>
+        
+                                </div>
+                                <div>
+                                        CONSUMER POLICY:<br>
+                                        <span>Terms of use</span><br>
+                                        <span>Security</span><br>
+                                        <span>Privacy</span><br>
+
+        
+                                </div>
+                                <div>
+                                        SOCIAL:<br>
+                                        <span>Facebook</span><br>
+                                        <span>Twitter</span><br>
+                                        <span>You Tube</span><br>
+                                </div>
+        
+                        </div>
+                        <div class="panel-2">
+                                <div>
+                                Mail us:<br>
+                                <span>Flick view privey Limited</span><br>
+                                <span>Hyderabad,India</span>
+                                </div>
+                                <div>
+                                Founder:<br>
+                                <span>Aman kumar Dash</span><br>
+                                <span> cell-7656943841</span><br>
+                                <span>subham Kumar Panda</span><br>
+                                <span>Rajesh Behera</span><br>
+                                </div>
+                        </div>
+                </footer>
+                <aside>
+                        <div>
+                        <div
+                class="bi bi-facebook">
+
+                </div>
+                <div
+                class="bi bi-instagram">
+
+                </div>
+                <div class="bi bi-youtube">
+
+                </div>
+                <div 
+                class="bi bi-twitter-x">
+
+                </div>
+                </div>
+                </aside>
+                
+        </body>
+        </body>
+</html>

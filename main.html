@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <title>Document</title>
+        <style>
+                body{
+                        margin: 0%;
+                        font-family: Arial, Helvetica, sans-serif;
+
+                }
+                header{
+                        font-size: 50px;
+                        display: flex;
+                        background-color: blue;
+                        color: aliceblue;
+                        grid-template-columns: 1fr auto;
+                        align-items: center;
+                        padding: 10px;
+                        justify-content: space-between;
+                        
+                        
+                }
+                .title{
+                        text-align: left;
+                }
+                .search{
+                        text-align: center;
+                        margin-left: 100px;
+                        color: gray;
+                        
+                }
+                .search form{
+                        display: flex;
+                        align-items: center;
+                }
+                .search input[type="text"]{
+                        width:500px ;
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: none;
+                        
+                }
+                .search button{
+                        padding: 5px;
+                        border: none;
+                        color: blueviolet;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        background-color: aliceblue;
+                        width: 80px;
+
+                }
+                .icons{
+                        text-align: right;
+                        font-size: 25px;
+                        display: flex;
+                        align-items: center;
+                }
+                .language{
+                        color: white;
+                        font-family: arial;
+                        font-weight: bold;
+                        font-size: 18px;
+                        background-color: black;
+                        border-radius: 5px;
+                }
+                .bi-heart{
+                        color: red;
+                        background-color: wheat;
+                        border-radius: 5px;
+                        fill: red;
+
+                }
+                .bi-person{
+                        color: white;
+                        background-color: black;
+                        border-radius: 5px;
+                }
+                .bi-signin{
+                        
+                         /* color: white;
+                        font-family: arial;
+                        font-size: 18px;
+                        font-weight: bold; */
+                        padding: 5px;
+                        background-color: black;
+                        color: white;
+                        border-radius: 5px;
+                }
+                .title {
+            font-family: Arial;
+            font-size: 40px;
+        }
+        .scroll-bar{
+            overflow-x: auto;
+            flex-grow: 1;
+        }
+        .card {
+            width: 300px;
+            box-shadow: 2px 2px 2px black;
+            padding: 10px;
+            margin: 15px;
+            height: 500px;
+            transition: transform 0.3s ease-in-out;
+        
+            box-shadow: 0 4px 8px 0;
+
+
+        }
+        .container{
+            display: flex;
+            flex-direction:row ;
+
+        }
+        .card-img {
+            width: 250px;
+            height:350px;
+        }
+        .card-body {
+            height: 350px;
+            text-align: center;
+            font-family: Arial;
+            font-size: 30px;
+            width: 280px;
+        }
+        .card-title {
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .card-subtitle {
+            margin-bottom: 10px;
+        }
+        .rating {
+            color:goldenrod;
+        }
+        @media(max-width:1100px)
+        {.container {
+            display: flex;
+            flex-direction:row-reverse;
+        }
+    }
+        </style>
+</head>
+<header>
+        <div class="title">FLICKVIEW</div>
+        <div class="search">
+                <form >
+                <input type="text"
+                placeholder="Enter what you Want.....movies.........,web series...........,shows....... and meny more....... "
+                name="search">
+                
+                <button>
+                
+                search
+                </button>
+</form>
+        </div>
+        <div class="icons">
+                <span class="language">English</span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-person"></span>
+                <span class="signin">signin</span>
+        </div>
+</header>
+        <body>
+                <div align="center" class="title"><b>Trending Movies</b></div>
+                <div class="scroll-bar">
+                <div class="container">
+                    <div class="card">
+                        
+                        <div class="card-header">
+                            <img src="public/images/animal.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                ANIMAL
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/beast.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                BEAST
+                            </div>
+                            <div class="card-subtitle">
+                        
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+            
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/jailer.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                                JAILER
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/gadar.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               GADAR2
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/kgf.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               KGF-2
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/kotha.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               KING OF KOTHA
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/leo.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               LEO
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/puspa.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               PUSPA
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/pathan.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               PATHAN
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/tiger3.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               TIGER-3
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/rrr.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               RRR
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                        <div class="card">
+                        <div class="card-header">
+                            <img src="public/images/pathan.jpg" class="card-img">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title">
+                               PATHAN
+                            </div>
+                            <div class="card-subtitle">
+                                
+                            </div>
+                            <div class="rating">
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                                <span class="bi bi-star-fill"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                            </div>
+                        </div>
+        
+</body>
+</html>
