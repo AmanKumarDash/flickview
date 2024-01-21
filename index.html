@@ -527,7 +527,8 @@
 					<label for="chk" aria-hidden="true">Log in</label>
 					<input class="input" type="email" name="email" placeholder="Email" required="">
 					<input class="input" type="password" name="pswd" placeholder="Password" required="">
-					<button>Log in</button>
+					<button onclick="auth()"
+                                        >Log in</button>
 				</form>
 			</div>
                 
@@ -632,7 +633,23 @@
                 </div>
                 </div>
                 </aside>
-                
+                <script>
+                        function auth(){
+                                let email=document.getElementsByClassName('email').value;
+                                let password=document.getElementsByClassName('password').value;
+                                //condition
+                                if(email=='sonutkb7656@gmail.com' && password=='88952')
+                                {
+                                        window.location.assign('main.html');
+                                        alert("login successfully")
+                                }
+                                else{
+                                        alert("invalid information")
+                                        return;
+                                }
+
+                        }
+                </script>
         </body>
         </body>
 </html>
