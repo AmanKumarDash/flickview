@@ -9,6 +9,7 @@
         <meta name="discription" content="embrace the magic of cinema,effortless ticket booking at your fingertips, discover the latest movie trend ">
         <meta charset="utf-8">
         <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+        <script src="https://kit.fontawesome.com/3a48d3f1a6.js" crossorigin="anonymous"></script>
         
         <style>
                 body{
@@ -286,95 +287,62 @@
 
                         
                 }
-                .form{
-                        display: flex;
-                        flex-direction: column;
-                        
-                        gap: 5px;
-                        padding: 10px;
-                        font-size: 10px;
-                }
-                #chk{
-                        display: none;
-                }
-                .login{
-                        position: relative;
-                        width: 200px;
-                        height: 200px;
-                        margin-top: 10px;
-                        border-radius: 90% / 5%;
-                        font-family: Arial, Helvetica, sans-serif;
-                        font-weight: bold;
-                        padding-top: 20px;
-                        
-                }
-                .login label{
-                        margin: 5% 0  5%;
-                        
-                }
-                label{
-                        color: #fff;
-                        font-size: 30px;
-                        justify-content: center;
-                        display: flex;
-                        font-weight: bold;
-                        cursor: pointer;
-                        transition: 03s ease-in-out;
-                        
-                        
+                .container {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
 
-                }
-                .input{
-                        width: 250px;
-                        height: 10px;
-                        background-color:white;
-                        padding: 20px;
-                        border: none;
-                        outline: none;
-                        border-radius: 5px;
-                        font-size: 10px;
-                        
-                }
-                .register{
-                        background: #f1e3e3;
-                        border-radius: 90% / 5%;
-                        transform: translateY(10%);
-                        transition: .6s ease-in-out;
-                        
-                }
-                .register label{
-                        color:#573b8a;
-                        transform: scale(.9);
-                        
-                }
-                #chk:checked ~.register{
-                        transform: translateY(-77%);
-                }
+    form {
+      background-color: #6e26f4;
+      border-radius: 5px;
+      padding: 20px;
+      width: 300px;
+      border: solid black;
+      margin: 10px;
+      margin-left: 1000px;
+    }
 
-                #chk:checked ~.register label{
-                        transform: scale(1);
-                        margin: 5% 0 5%;
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
 
-                }
-                #chk:checked ~.login label{
-                        transform:(.6);
-                        margin: 35% 0 5%;
-                }
-                .form button{
-                        width:150px ;
-                        height: 20px;
-                        margin: 10px auto 10px;
-                        color: #fff;
-                        background: #573b8a;
-                        font-size: 15px;
-                        border: none;
-                        border-radius: 8px;
-                        cursor: pointer;
-                        transition: .2s ease-in-out;
-                }
-                .form button:hover{
-                        background-color: #360c83;
-                 }
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    button {
+      width: 100px;
+      padding: 10px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #e13d3f;
+    }
+
+    /* Hide the registration form initially */
+    #registrationForm {
+      display: none;
+    }
+                
+                 
                  summary {
             background-color: black;
             color:white;
@@ -506,43 +474,49 @@
                         <div class="msubsitetitle">EAT...FLICK......SLEEP....REPEAT....</div>
 
                 <main>
-                         <!-- <div class="register">Ready to flick? enter your Email/phone.</div>
-                         <div class="registerform">
-                                <span class="email">Enter our mail </span>
-                                <span class="button">  
-                                         <div class="email-section">
-                                                <div class="email">
-                                                    <input type="email" class="email" placeholder="Email address">
-                                                </div>
-                                                <div><button class="email-btn">Get Started ></button></div>
+                        <div class="container">
+                                <!-- Login Form -->
+                                <form id="loginForm">
+                                  <h2>Login</h2>
+                                  <div>
+                                    <label for="loginUsername">Username</label>
+                                    <input type="text" id="loginUsername" required>
+                                  </div>
+                                  <div>
+                                    <label for="loginPassword">Password</label>
+                                    <input type="password" id="loginPassword" required>
+                                  </div>
+                                  <button type="submit">Log In</button>
+                                  <!-- Register Button inside the login form -->
+                                  <button type="button" id="showRegistrationForm">Register</button>
+                                </form>
+                            
+                                <!-- Registration Form -->
+                                <form id="registrationForm">
+                                  <h2>Register</h2>
+                                  <div>
+                                    <label for="regUsername">Username</label>
+                                    <input type="text" id="regUsername" required>
+                                  </div>
+                                  <div>
+                                    <label for="regEmail">Email</label>
+                                    <input type="email" id="regEmail" required>
+                                  </div>
+                                  <div>
+                                    <label for="regPassword">Password</label>
+                                    <input type="password" id="regPassword" required>
+                                  </div>
+                                  <div>
+                                    <label for="regConfirmPassword">Confirm Password</label>
+                                    <input type="password" id="regConfirmPassword" required>
+                                  </div>
+                                  <button type="submit">Register</button>
+                                  <!-- Back to Login button inside the registration form -->
+                                  <button type="button" id="backToLoginForm">Back to Login</button>
+                                </form>
+                              </div>
                                 
-                                        <span class="bi bi-chevron-bar"</span>
-                                </span> -->
-                         <!-- </div>  -->
-                        <div class="main">  	
-		<input type="checkbox" id="chk" aria-hidden="true">
-
-			<div class="login">
-				<form class="form">
-					<label for="chk" aria-hidden="true">Log in</label>
-					<input class="input" type="email" name="email" placeholder="Email" required="">
-					<input class="input" type="password" name="pswd" placeholder="Password" required="">
-					<button onclick="auth()"
-                                        >Log in</button>
-				</form>
-			</div>
-                
-
-      <div class="register">
-				<form class="form">
-					<label for="chk" aria-hidden="true">Register</label>
-					<input class="input" type="text" name="txt" placeholder="Username" required="">
-					<input class="input" type="email" name="email" placeholder="Email" required="">
-					<input class="input" type="password" name="pswd" placeholder="Password" required="">
-					<button>Register</button>
-				</form>
-			</div>
-	</div>
+                         
         
 
                 </main>
@@ -634,22 +608,60 @@
                 </div>
                 </aside>
                 <script>
-                        function auth(){
-                                let email=document.getElementsByClassName('email').value;
-                                let password=document.getElementsByClassName('password').value;
-                                //condition
-                                if(email=='sonutkb7656@gmail.com' && password=='88952')
-                                {
-                                        window.location.assign('main.html');
-                                        alert("login successfully")
-                                }
-                                else{
-                                        alert("invalid information")
-                                        return;
-                                }
-
-                        }
-                </script>
+                        // Handle login form submission
+                        document.getElementById('loginForm').addEventListener('submit', function(event) {
+                          event.preventDefault();
+                          const username = document.getElementById('loginUsername').value;
+                          const password = document.getElementById('loginPassword').value;
+                    
+                          if (username === 'admin' && password === 'password') {
+                            alert('Login Successful');
+                            window.location.assign("main.html")
+                          } else {
+                            alert('Invalid username or password');
+                          }
+                        });
+                    
+                        // Handle registration form submission
+                        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+                          event.preventDefault();
+                          const username = document.getElementById('regUsername').value;
+                          const email = document.getElementById('regEmail').value;
+                          const password = document.getElementById('regPassword').value;
+                          const confirmPassword = document.getElementById('regConfirmPassword').value;
+                    
+                          if (username && email && password && confirmPassword) {
+                            if (password === confirmPassword) {
+                              alert('Registration Successful');
+                              document.getElementById('registrationForm').reset();
+                            } else {
+                              alert('Passwords do not match');
+                            }
+                          } else {
+                            alert('Please fill in all fields');
+                          }
+                        });
+                    
+                        // Toggle between login and registration forms
+                        var loginForm = document.getElementById('loginForm');
+                        var registrationForm = document.getElementById('registrationForm');
+                        var showRegFormBtn = document.getElementById('showRegistrationForm');
+                        var backToLoginFormBtn = document.getElementById('backToLoginForm');
+                    
+                        showRegFormBtn.addEventListener('click', function(event) {
+                          event.preventDefault();
+                          loginForm.style.display = 'none';
+                          registrationForm.style.display = 'block';
+                        });
+                    
+                        backToLoginFormBtn.addEventListener('click', function(event) {
+                          event.preventDefault();
+                          registrationForm.style.display = 'none';
+                          loginForm.style.display = 'block';
+                        });
+                      </script>
+                        
+                
         </body>
         </body>
 </html>
