@@ -1,0 +1,92 @@
+html {
+        overflow: hidden; /*FF fix*/
+        height: 100%;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        background: hsl(189, 78%, 65%) linear-gradient( hsl(308, 62%, 78%), hsl(206, 65%, 67%));
+      }
+      
+      body {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+      p {
+          margin: 0;
+      }
+      
+      
+      /* box ------------------------------------------------------ */
+      
+      #box {
+        padding: 100px;
+        text-align: center;
+        min-width: 900px;
+        font-size: 80px;
+        font-weight: bold;
+        -webkit-backface-visibility:visible; /* fixes flashing */
+      }
+      
+      
+      /* flashlight ------------------------------------------------------ */
+      
+      #flickview {
+        color: hsla(356, 93%, 78%, 0);
+        perspective: 50px;
+        outline: none;
+      }
+      
+      
+      /* flash ------------------------------------------------------ */
+      
+      #flick {
+        display: inline-block;
+        text-shadow: #d41d1d 0 0 1px, #fff 0 -1px 2px, #fff 0 -3px 2px, rgba(0,0,0,0.8) 0 30px 25px;
+        transition: margin-left 0.3s cubic-bezier(0, 1, 0, 1);
+      }
+          
+      #box:hover #flick {
+        margin-left: 20px;
+        transition: margin-left 1s cubic-bezier(0, 0.75, 0, 1);
+      }
+      
+      
+      /* light ------------------------------------------------------ */
+      
+      #view {
+        display: inline-block;
+        text-shadow: #111 0 0 1px, rgba(12, 0, 5, 0.1) 0 1px 3px;
+      }
+      
+      #box:hover #view {
+        text-shadow: #145cde 0 0 4px, #29e32b 0 0 20px;
+        transform: rotateY(-30deg);
+        transition:         transform 0.5s ease-in-out, text-shadow 0.1s ease-out;
+      }
+      .button{
+                              position: absolute;
+                              display: inline-block;
+                              bottom: 20px;
+                              left: 35%;
+                              display: inline-block;
+                              padding: 1ox 20px;
+                              background-color: rgba(255,255,255,0.3);
+                              color: #333;
+                              text-decoration: none;
+                              border: none;
+                              border-radius: 5px;
+                              font-size: 40px;
+                              transition: background-color 0.3s ease-in-out;
+                              box-shadow: 0 4px 6px rgba(0,0,0,0.1)
+                              font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                  
+      
+                      }
+                      .button:hover{
+                              background-color:rgba(255,255,255,0.5);
+                      } 

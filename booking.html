@@ -5,69 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Ticket Booking</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f5f5f5;
-    }
-
-    .container {
-        max-width: 800px;
-        margin: 50px auto;
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .movie-details {
-        display: flex;
-        margin-bottom: 20px;
-    }
-
-    .movie-details img {
-        max-width: 150px;
-        margin-right: 20px;
-    }
-
-    .details {
-        flex-grow: 1;
-    }
-
-    .seating-plan {
-        display: grid;
-        gap: 5px;
-        grid-template-columns: repeat(10, 1fr); /* Adjust the number of columns as needed */
-        display: none; /* Hide initially */
-    }
-
-    .seat {
-        width: 30px;
-        height: 30px;
-        background-color: #ddd;
-        margin-right: 5px;
-        cursor: pointer;
-    }
-
-    .selected {
-        background-color: #f00; /* Change to the desired color for selected seats */
-    }
-
-    .checkout-btn {
-        background-color: #f00;
-        color: #fff;
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    .checkout-btn:hover {
-        background-color: #d00;
-    }
-    </style>
+    <link rel="stylesheet" href="src/css/booking.css">
+    
+    
 </head>
 <body>
     <div class="container">
@@ -86,70 +26,8 @@
         <button class="checkout-btn" onclick="toggleSeatingPlan()">Book Ticket</button>
         <p>Total Amount: <span id="totalAmount">0</span> INR</p>
     </div>
-    <script>
-    const seatingPlanContainer = document.getElementById('seatingPlan');
-    const totalAmountElement = document.getElementById('totalAmount');
-
-    const rows = 9; // Number of rows10
-    const cols = 9; // Number of seats in each row
-    const seatPrice = 150; // Price per seat in INR
-
-    let selectedSeats = [];
-
-    function createSeatingPlan() {
-        for (let i = 1; i <= rows; i++) {
-            for (let j = 1; j <= cols; j++) {
-                const seatElement = document.createElement('div');
-                seatElement.classList.add('seat');
-                seatElement.id = `seat-${i}-${j}`;
-                seatElement.textContent = `${i}-${j}`;
-                seatElement.onclick = function() { selectSeat(i, j); };
-                seatingPlanContainer.appendChild(seatElement);
-            }
-        }
-    }
-
-    function selectSeat(row, col) {
-        const seatId = `seat-${row}-${col}`;
-        const index = selectedSeats.indexOf(seatId);
-
-        if (index === -1) {
-            // Seat not selected, add to selectedSeats
-            selectedSeats.push(seatId);
-        } else {
-            // Seat already selected, remove from selectedSeats
-            selectedSeats.splice(index, 1);
-        }
-
-        updateSeatingPlan();
-    }
-
-    function updateSeatingPlan() {
-        const allSeats = document.querySelectorAll('.seat');
-        
-        allSeats.forEach(seat => {
-            const seatId = seat.id;
-            if (selectedSeats.includes(seatId)) {
-                seat.classList.add('selected');
-            } else {
-                seat.classList.remove('selected');
-            }
-        });
-
-        updateTotalAmount();
-    }
-
-    function updateTotalAmount() {
-        const totalAmount = selectedSeats.length * seatPrice;
-        totalAmountElement.textContent = totalAmount;
-    }
-
-    function toggleSeatingPlan() {
-        seatingPlanContainer.style.display = seatingPlanContainer.style.display === 'none' ? 'grid' : 'none';
-    }
-
-    // Initialize seating plan
-    createSeatingPlan();
+    <script src="src/script/booking.js">
+    
     </script>
 </body>
 </html>

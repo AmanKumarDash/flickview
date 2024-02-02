@@ -1,0 +1,61 @@
+body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .movie-details {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .movie-details img {
+        max-width: 150px;
+        margin-right: 20px;
+    }
+
+    .details {
+        flex-grow: 1;
+    }
+
+    .seating-plan {
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(10, 1fr); /* Adjust the number of columns as needed */
+        display: none; /* Hide initially */
+    }
+
+    .seat {
+        width: 30px;
+        height: 30px;
+        background-color: #ddd;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .selected {
+        background-color: #f00; /* Change to the desired color for selected seats */
+    }
+
+    .checkout-btn {
+        background-color: #f00;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .checkout-btn:hover {
+        background-color: #d00;
+    }
