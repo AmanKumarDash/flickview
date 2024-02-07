@@ -3,7 +3,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
         const username = document.getElementById('loginUsername').value;
         const password = document.getElementById('loginPassword').value;
   
-        if (username === 'admin' && password === 'password') {
+        if (username === 'AMAN' && password === 'password') {
           alert('Login Successful');
           window.location.assign("main.html")
         } else {
