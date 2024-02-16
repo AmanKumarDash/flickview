@@ -90,3 +90,17 @@ html {
                       .button:hover{
                               background-color:rgba(255,255,255,0.5);
                       } 
+                      @media (max-width: 600px) {
+                        .button {
+                          padding: 8px 15px;
+                          font-size: 14px;
+                        }
+                      
+                        #flickview {
+                          font-size: 20px;
+                        }
+                      
+                        #flick, #view {
+                          display: block; /* Stack them on top of each other */
+                        }
+                      }

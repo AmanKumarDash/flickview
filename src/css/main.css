@@ -147,3 +147,29 @@ display: flex;
 flex-direction:row-reverse;
 }
 }
+@media (max-width: 768px) {
+        .card {
+            /* Adjustments for mobile */
+            margin: 10px auto;
+            width: 90%; /* Make card use more of the screen on mobile */
+        }
+    
+        .card-header, .card-body {
+            padding: 10px; /* Adjust padding for smaller screens */
+        }
+    
+        .search form {
+            display: flex;
+            flex-direction: column;
+        }
+    
+        .search input[type="text"] {
+            margin-bottom: 10px; /* Add space between input and button */
+        }
+    
+        .search button {
+            width: 100%;
+        }
+    
+        /* Add more responsive adjustments as needed */
+    }
