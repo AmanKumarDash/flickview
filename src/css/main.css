@@ -141,6 +141,7 @@ color:goldenrod;
 button:hover {
         background-color: #e13d3f;
         }
+       
 @media(max-width:1100px)
 {.container {
 display: flex;
